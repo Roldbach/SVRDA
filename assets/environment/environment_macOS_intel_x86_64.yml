@@ -1,4 +1,4 @@
-name: 2d_3d_image_registration_gui
+name: SVRDA
 channels:
   - conda-forge
   - defaults
@@ -89,4 +89,4 @@ dependencies:
       - pillow==9.4.0
       - pyparsing==3.0.9
       - vtk==9.2.6
-prefix: /Users/weixunluo/opt/anaconda3/envs/2d_3d_image_registration_gui
+prefix: /Users/weixunluo/opt/anaconda3/envs/SVRDA

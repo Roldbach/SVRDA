@@ -26,4 +26,3 @@
         ]
     }
     ```
-- Please use the above as reference in cases where necessary modifications/additions have to be made.
