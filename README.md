@@ -46,7 +46,7 @@ full source code and documentation here.
 provided environment setup files.
     ```
     # 1. Go to the repository root directory.
-    cd <repository_root_directory>
+    cd /repository_root_directory
 
     # 2. Choose a compatible setup file for your CPU.
     conda env create -f assets/environment/environment_linux_x86_64.yml
@@ -75,37 +75,37 @@ categorical 3D segmentation labels.
     ```
     |-- dataset
         |-- case_1
-        |   |-- <body_sub_directory_name>
-        |   |   |-- *<body_keyword_1>*.nii.gz
-        |   |   |-- *<body_keyword_2>*.nii.gz
+        |   |-- <<body_sub_directory_name>>
+        |   |   |-- *<<body_keyword_1>>*.nii.gz
+        |   |   |-- *<<body_keyword_2>>*.nii.gz
         |   |   |-- ...
-        |   |-- <organ_sub_directory_name>
-        |   |   |-- *<organ_keyword_1>*.nii.gz
-        |   |   |-- *<organ_keyword_2>*.nii.gz
+        |   |-- <<organ_sub_directory_name>>
+        |   |   |-- *<<organ_keyword_1>>*.nii.gz
+        |   |   |-- *<<organ_keyword_2>>*.nii.gz
         |   |   |-- ...
-        |   |-- <slice_sub_directory_name>
+        |   |-- <<slice_sub_directory_name>>
         |   |   |-- *-a*.nii.gz
         |   |   |-- *-b*.nii.gz
         |   |   |-- *-c*.nii.gz
-        |   |-- <slice_mask_sub_directory_name>  # Optional
+        |   |-- <<slice_mask_sub_directory_name>>  # Optional
         |   |   |-- *-a*.nii.gz
         |   |   |-- *-b*.nii.gz
         |   |   |-- *-c*.nii.gz
         |   |   |-- ...
         `-- case_2
-        |   |-- <body_sub_directory_name>
-        |   |   |-- *<body_keyword_1>*.nii.gz
-        |   |   |-- *<body_keyword_2>*.nii.gz
+        |   |-- <<body_sub_directory_name>>
+        |   |   |-- *<<body_keyword_1>>*.nii.gz
+        |   |   |-- *<<body_keyword_2>>*.nii.gz
         |   |   |-- ...
-        |   |-- <organ_sub_directory_name>
-        |   |   |-- *<organ_keyword_1>*.nii.gz
-        |   |   |-- *<organ_keyword_2>*.nii.gz
+        |   |-- <<organ_sub_directory_name>>
+        |   |   |-- *<<organ_keyword_1>>*.nii.gz
+        |   |   |-- *<<organ_keyword_2>>*.nii.gz
         |   |   |-- ...
-        |   |-- <slice_sub_directory_name>
+        |   |-- <<slice_sub_directory_name>>
         |   |   |-- *-a*.nii.gz
         |   |   |-- *-b*.nii.gz
         |   |   |-- *-c*.nii.gz
-        |   |-- <slice_mask_sub_directory_name>  # Optional
+        |   |-- <<slice_mask_sub_directory_name>>  # Optional
         |   |   |-- *-a*.nii.gz
         |   |   |-- *-b*.nii.gz
         |   |   |-- *-c*.nii.gz
