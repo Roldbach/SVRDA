@@ -1,0 +1,11 @@
+#page_selection_section {
+    height: 5vh;
+}
+
+.page {
+    height: 95vh;
+}
+
+.text_centred_label {
+    text-align: center;
+}

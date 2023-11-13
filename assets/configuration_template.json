@@ -1,0 +1,22 @@
+{
+  "dataset_directory_path": "/path",
+  "directory_name": {
+    "body": "<<name>>",
+    "organ": "<<name>>",
+    "organ_resampled": "<<name>>",
+    "slice": "<<name>>",
+    "slice_mask": "<<name>>"
+  },
+  "file_name": {
+    "transformation_spreadsheet": "<<name>>"
+  },
+  "pattern": {
+    "body": "*regex*",
+    "organ": "*regrex*",
+    "slice": "*regex*",
+    "slice_mask": "*regex*"
+  },
+  "tag": {
+    "organ_resampled": "-tag-"
+  }
+}
