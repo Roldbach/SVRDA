@@ -66,8 +66,8 @@ SAVE_CASE_FAILURE_ERROR_MODAL_CHILDREN = (
 
 # ----- Main Plot 2D Section -----
 MAIN_GRAPH_MASK_TYPE_SELECTION_DROPDOWN_OPTION = {
-    id.organ_resampled_mask_id: 'Resampled Organ Mask',
-    id.evaluation_mask_id: 'Evaluation Mask',  # This is equivalent to Slice-body mask in the paper.
+    id.organ_resampled_mask_id: 'Resampled Label',
+    id.evaluation_mask_id: 'Resultant Mask',
     id.none_mask_id: 'None',
 }
 MAIN_GRAPH_MASK_TYPE_SELECTION_DROPDOWN_VALUE = id.organ_resampled_mask_id
@@ -78,13 +78,13 @@ MAIN_GRAPH_MASK_FORMAT_SELECTION_DROPDOWN_VALUE = id.contour_id
 
 # ----- Support Plot 2D Section -----
 SUPPORT_GRAPH_IMAGE_TYPE_SELECTION_DROPDOWN_OPTION = {
-    id.body_resampled_image_id: 'Resampled Body Image',
-    id.checkerboard_id: 'Checkerboard Image',
+    id.body_resampled_image_id: 'Resampled Slice',
+    id.checkerboard_id: 'Checkerboard',
 }
 SUPPORT_GRAPH_IMAGE_TYPE_SELECTION_DROPDOWN_VALUE = id.body_resampled_image_id
 SUPPORT_GRAPH_MASK_TYPE_SELECTION_DROPDOWN_OPTION = {
-    id.organ_resampled_mask_id: 'Resampled Organ Mask',
-    id.evaluation_mask_id: 'Evaluation Mask',  # This is equivalent to Slice-body mask in the paper.
+    id.organ_resampled_mask_id: 'Resampled Label',
+    id.evaluation_mask_id: 'Resultant Mask',
     id.none_mask_id: 'None',
 }
 SUPPORT_GRAPH_MASK_TYPE_SELECTION_DROPDOWN_VALUE = id.organ_resampled_mask_id

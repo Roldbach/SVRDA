@@ -13,13 +13,13 @@ import dash
 import dash_bootstrap_components as dbc
 
 from presentation_layer import app_factory
-from utils import path_utils
 
 
 APP = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 FACTORY = app_factory.AppFactory()
 HOST_LOCAL = '127.0.0.1'
-HOST_SERVER = ''
+HOST_REMOTE = ''
+IS_LOCAL = True
 
 
 def main() -> int:
@@ -41,10 +41,10 @@ def _parse_argument() -> argparse.Namespace:
     return parser.parse_args()
 
 def _run_application() -> None:
-    APP.run(host=_select_host(), debug=True)
+    APP.run(host=_select_host(), debug=False)
 
 def _select_host() -> str:
-    return HOST_SERVER if path_utils.is_on_server() else HOST_LOCAL
+    return HOST_LOCAL if IS_LOCAL else HOST_REMOTE
 
 
 if __name__ == '__main__':

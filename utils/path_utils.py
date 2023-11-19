@@ -24,9 +24,6 @@ def extract_file_extension(file_path: str) -> str:
 def extract_file_name(file_path: str) -> str:
     return pathlib.Path(file_path).name
 
-def is_on_server() -> bool:
-    return str(pathlib.Path.home().parent) == '/home'
-
 def list_subdirectory(
     directory_path: str,
     require_absolute: bool = True,

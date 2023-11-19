@@ -18,72 +18,56 @@ from utils import widget_utils
 
 # Please update this if changes are maded to README.md in the repository.
 HELP_MODAL_CONTENT = '''
-### Transformation ###
-- Currently, **rigid transformations** can be applied to 2D quantitative
-parametric maps to adjust their positions. These include translation and
-rotation in X, Y, Z axis for a total of **6** degrees of freedom.
-- Scanner Coordinate System (static) used in the App coincides with standard
-**NiFTI** coordinate system , which has directional code **LAS**.
-- Slice Coordinate System (dynamic) used in the App depends on the
-**real-time** orientation of **the selected 2D quantitative parametric map**.
-
-### Transformation Control ###
-- Transformations can be controlled using the following keyboard shortcuts:
-    - Translations in Scanner Coordinate System:
+### Transformation
+- **Rigid transformations** with six degrees of freedom (three translation and
+three rotation parameters) can be applied to adjust the poses of 2D slices.
+- Transformations can be computed with respect to:
+    - Patient Coordinate System: A static RAS+ coordinate system
+    - Slice Coordinate System: A dynamic coordinate system based on the
+    real-time pose of the currently selected slice
+- Please control transformations using the following keyboard shortcuts:
+    - Translations in the Patient Coordinate System:
         - x axis: **a**, **d**
         - y axis: **w**, **s**
         - z axis: **q**, **e**
-    - Translations in Slice Coordinate System:
+    - Translations in the Slice Coordinate System:
         - x axis: **j**, **l**
         - y axis: **i**, **k**
         - z axis: **u**, **o**
-    - Rotations in Slice Coordinate System:
-        - x axis: **Shift + W**, **Shift + S**
-        - y axis: **Shift + A**, **Shift + D**
-        - z axis: **Shift + Q**, **Shift + E**
+    - Rotations in the Slice Coordinate System:
+        - x axis: **Shift+W**, **Shift+S**
+        - y axis: **Shift+A**, **Shift+D**
+        - z axis: **Shift+Q**, **Shift+E**
 
-### Mode ###
-- We introduce different modes to allow flexible control of transformations.
-    - Macro Mode
-        - **All 2D quantitative parametric maps** are visible within the 3D plot.
-        - Transformations can be applied to **all 2D quantitative parametric
-        maps** as group effects.
-        - Rotations are done in **Scanner Coordinate System** only and **the
-        mean centroid of all 2D quantitative parametric maps** is chosen as the
-        rotation centre.
-    - Micro Mode
-        - Only **the selected 2D quantitative parametric map** is visible within
-        the 3D plot.
-        - Transformations can only be applied to **the selected 2D quantitative
-        parametric map**.
-        - Rotations are done in **Slice Coordinate System** depending on the
-        selected 2D quantitative parametric map and its **centroid** is chosen as
-        the rotation centre.
+### Mode
+- Modes are introduced to adjust the granularity of transformation control:
+    - Macro Mode:
+        - **All 2D slices** are visible.
+        - Transformations are applied to **all 2D slices** simultaneously.
+    - Micro Mode:
+        - Only **the selected 2D slice** is visible.
+        - Transformations are exclusively applied to **the selected 2D slice**.
 
-### Evaluation ###
-- Evaluation are served as a support to help users determine whether 2D
-quantitative parametric maps are well aligned with the 3D volume at the current
-position or not.
-- Evaluation is done by measuring the similarity/difference between **the
-selected 2D quantitative map** and **the corresponding 2D resampled image from
-the 3D volume**.
-- For manual registration, we encourage users to mainly rely on exptertise and
-knowledge during decision making and only use this as a supplementary reference.
-- The following evaluation metrics are available in the GUI:
-    - Normalised Mutual Information (NMI): A **similarity** measurement that
-    measures the mutual dependence between 2 images. This is recommended for
-    **multi-modal data**.
-    - Sum of Absolute Difference (SAD): A **difference** measurement that
-    measures the pixel-wise difference between 2 images.
+### Alignment Quantification
+- The alignment between data is quantitatively monitored in real-time by
+measuring the difference between the selected slice and its corresponding 2D
+cross-section image resampled from the 3D volume.
+- The following evaluation metrics have been implemented:
+    - Normalised Mutual Information (NMI): A **similarity** metric that measure
+    the ratio of the sum of the marginal entropy between the images.
+    - Sum of Absolute Difference (SAD): A **difference** metric that measures
+    the sum of the absolute difference between pixel values between the images.
 
-### Case Control ###
-- To shift to a new case, you could:
-    - use **Previous** and **Next** buttons to go through each case one-by-one.
-    - click the dropdown showing the current case id and select the new case id.
+### Case and Saving
+- To shift to a new case, please:
+    - use **Previous/Next** buttons to go through each case one-by-one.
+    - select the new case ID in the dropdown showing the current case ID.
 - The current case is **auto-saved** before shifting to a new case.
 - **Please notice that directly closing the browser won't save the current case.
 To save the last case, please manually press the Save button.**
 
+### Note
+- [Github Repository](https://github.com/Roldbach/SVRDA)
 '''
 HOME_PAGE_LINK_CHILDREN = 'Home'
 HOME_PAGE_LINK_HREF = '/home'
