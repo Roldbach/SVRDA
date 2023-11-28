@@ -1,4 +1,4 @@
-# SVRDA: A Web-based Dataset Annotation Tool for Slice-to-Volume Registration
+[# SVRDA: A Web-based Dataset Annotation Tool for Slice-to-Volume Registration](https://arxiv.org/abs/2311.15536)
 
 
 > **SVRDA: A Web-based Dataset Annotation Tool for Slice-to-Volume Registration**<br>
@@ -8,9 +8,9 @@
 > **Abstract** <br>
 > **Background and Objective:** The lack of benchmark datasets has impeded the
 > advancement of slice-to-volume registration algorithms. Such datasets are
-> difficult to acquire primarily due to the dimensional discrepancy within data
-> and the absence of task-specific software. We seek to develop a user-friendly
-> tool to streamline the dataset annotation for slice-to-volume registration.<br>
+> difficult to annotate primarily due to the dimensional difference within data
+> and the dearth of task-specific software. We seek to develop a user-friendly
+> tool to streamline dataset annotation for slice-to-volume registration.<br>
 >
 > **Methods:** The proposed tool namely SVRDA is an installation-free web
 > application for platform-independent collaborative dataset annotation. It
